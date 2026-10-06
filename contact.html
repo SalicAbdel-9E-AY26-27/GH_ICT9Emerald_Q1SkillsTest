@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <style type="text/css">
+        html, body{
+            margin: 0 !important;
+            padding: 0 !important;
+            overflow-x: hidden;
+            height: 100%;
+        }
+        body{
+            background-color: rgb(34, 30, 156);
+        }
+
+        /* INTERACTBLE NAVIGATION BAR */
+
+        .navbar{
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 65px;
+            width: 100%;    
+            background-color: rgb(4, 6, 101);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 23px;
+         }
+
+        .interacting a {
+            color: white;
+            font-family: 'Courier New';
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block; 
+            transition: all 0.5s
+        }
+
+        .interacting a:hover {
+            background-color: #061239;
+            border-radius: 30px;
+            text-shadow: 0.5px 0 0 #ffffff, -0.5px 0 0 #ffffff;
+        }
+
+        .logo{
+            display: block;
+            height: 45px;
+            width: 45px;
+            border-radius: 100%;
+            margin-left: 15px;
+        }
+
+        /* CONTACT PAGE */
+
+        .contact-container {
+            max-width: 500px;
+            margin: 120px auto 60px auto;
+            padding: 30px;
+            border-radius: 35px;
+            background-color: #0e2157; 
+            border-radius: 8px;
+            color: #ffffff;
+            font-family: 'Courier New';
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #1e2d5a;
+            border-radius: 4px;
+            background-color: #121f45;
+            color: #ffffff;
+            box-sizing: border-box;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: #007acc; 
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #007acc;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #005999; 
+        }
+
+    </style>
+</head>
+
+<body class="body">
+
+    <header class="navbar">
+        <img src=
+        "https://i.postimg.cc/44WKdRX9/LKH5Yzx-R3w-Rm9hyhdb-LI6IUGY15-Vq6z-Y9bv-Maa-Ny-CZp-QZulr-Dz6Mbr-Pa-Yxut9i-L7Qq2l-F4l1Q-s900-c-k-c0x.jpg"
+        class="logo">
+            <nav class="interacting">
+            <a href="GH_ICT9Emerald_Q1Project_Salic_Abdel.html" onclick=window.close(); return false;>Home</a>
+            </nav>
+    </header>
+
+<form class="contact-container" onsubmit="alert('Message sent!');">
+  <h2>Contact Me</h2>
+  <p>Feel free to reach out!</p>
+
+  <div class="contact-form">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Your Name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="you@example.com" required>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
+    </div>
+
+    <!-- 2. Keep this clean with NO onclick attribute at all -->
+    <button type="submit" class="submit-btn">Send Message</button>
+  </div>
+</form>
+
+</body>
+</html>
